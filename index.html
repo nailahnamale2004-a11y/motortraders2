@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motor Traders Uganda | Trusted Car Marketplace</title>
+  <meta name="description" content="Buy and sell cars in Uganda. Browse Toyota Harrier, Prado, Premio, Wish, Noah, Mercedes-Benz, BMW, and Land Cruiser listings across Kampala, Gulu, Mbarara, and more.">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 13h18l-2-5H5l-2 5Z"></path><path d="M5 13v5"></path><path d="M19 13v5"></path><circle cx="7" cy="18" r="2"></circle><circle cx="17" cy="18" r="2"></circle></svg>
+        </span>
+        <span>Motor Traders Uganda</span>
+      </a>
+      <div class="nav-links">
+        <a class="active" href="index.html">Browse Cars</a>
+        <a href="sell.html">Sell a Car</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="help.html">Help Centre</a>
+        <a href="auth.html" data-user-name>Account</a>
+      </div>
+      <div class="nav-actions">
+        <a class="button-secondary" href="auth.html">Login</a>
+        <a class="button" href="sell.html">Sell Your Car</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Uganda's Most Trusted Car Marketplace</h1>
+        <p>Buy and sell cars easily. From Kampala to Gulu, find the perfect vehicle for your journey.</p>
+        <div class="hero-actions">
+          <a class="button" href="#search">Browse Cars</a>
+          <a class="button-secondary" href="sell.html">Sell Your Car</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section search-panel" id="search">
+      <form id="searchForm">
+        <div class="filter-grid">
+          <div class="field">
+            <label for="makeFilter">Make</label>
+            <select id="makeFilter" name="make"></select>
+          </div>
+          <div class="field">
+            <label for="modelFilter">Model</label>
+            <input id="modelFilter" name="model" placeholder="Harrier, Prado, Premio">
+          </div>
+          <div class="field">
+            <label for="yearFilter">Year From</label>
+            <select id="yearFilter" name="year">
+              <option value="">Any year</option>
+              <option value="2022">2022+</option>
+              <option value="2020">2020+</option>
+              <option value="2018">2018+</option>
+              <option value="2015">2015+</option>
+              <option value="2010">2010+</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="priceFilter">Price Range</label>
+            <select id="priceFilter" name="price">
+              <option value="">Any price</option>
+              <option value="50000000">Under UGX 50,000,000</option>
+              <option value="100000000">Under UGX 100,000,000</option>
+              <option value="200000000">Under UGX 200,000,000</option>
+              <option value="300000000">Under UGX 300,000,000</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="transmissionFilter">Transmission</label>
+            <select id="transmissionFilter" name="transmission">
+              <option value="">Any transmission</option>
+              <option>Automatic</option>
+              <option>Manual</option>
+              <option>CVT</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="fuelFilter">Fuel Type</label>
+            <select id="fuelFilter" name="fuel">
+              <option value="">Any fuel</option>
+              <option>Petrol</option>
+              <option>Diesel</option>
+              <option>Hybrid</option>
+              <option>Electric</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bodyFilter">Body Type</label>
+            <select id="bodyFilter" name="body">
+              <option value="">Any body</option>
+              <option>SUV</option>
+              <option>Sedan</option>
+              <option>Van</option>
+              <option>Pickup</option>
+              <option>Hatchback</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="locationFilter">Location</label>
+            <select id="locationFilter" name="location"></select>
+          </div>
+          <button class="button full" type="submit"><span class="loader"></span>Search Cars</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="section" id="featured">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Featured vehicles</p>
+          <h2>Popular cars in Uganda</h2>
+        </div>
+        <p class="section-copy">Browse verified Toyota Harrier, Prado, Premio, Wish, Noah, Mercedes-Benz, BMW, and Land Cruiser listings priced in Uganda shillings.</p>
+      </div>
+      <div class="cars-grid" id="featuredGrid"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Why choose us</p>
+          <h2>Built for serious car buyers</h2>
+        </div>
+      </div>
+      <div class="why-grid">
+        <article class="info-card">
+          <h3>Verified sellers</h3>
+          <p>Dealer badges and profile checks help buyers know who they are messaging.</p>
+        </article>
+        <article class="info-card">
+          <h3>Ugandan locations</h3>
+          <p>Search across Kampala, Entebbe, Wakiso, Mukono, Jinja, Mbarara, Gulu, Mbale, Arua, and Fort Portal.</p>
+        </article>
+        <article class="info-card">
+          <h3>Private inquiries</h3>
+          <p>Saved cars, comparison, and in-app messages make every inquiry easier without exposing seller phone numbers.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="packages">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Seller packages</p>
+          <h2>Choose your posting package</h2>
+        </div>
+        <p class="section-copy">Every new user starts with 2 months of golden free access. After the trial, choose the package that fits how many cars you sell.</p>
+      </div>
+      <div class="packages-grid">
+        <article class="package-card">
+          <h3>Basic</h3>
+          <div class="package-price">Free</div>
+          <p>For casual sellers after the free golden trial ends.</p>
+          <ul>
+            <li>Up to 2 car postings after trial</li>
+            <li>Private buyer messages</li>
+            <li>3 to 10 photos per listing</li>
+          </ul>
+          <a class="button-secondary" href="sell.html">Start Free</a>
+        </article>
+        <article class="package-card featured">
+          <h3>Premium</h3>
+          <div class="package-price">UGX 30,000/month</div>
+          <p>For sellers who want stronger visibility and more posting power.</p>
+          <ul>
+            <li>Premium listing badge</li>
+            <li>Mobile Money or Visa payment</li>
+            <li>More active selling support</li>
+          </ul>
+          <a class="button" href="sell.html">Choose Premium</a>
+        </article>
+        <article class="package-card">
+          <h3>Golden</h3>
+          <div class="package-price">UGX 40,000</div>
+          <p>For dealers and high-volume sellers who want full access.</p>
+          <ul>
+            <li>Golden seller access</li>
+            <li>Featured listings</li>
+            <li>Best package for dealers</li>
+          </ul>
+          <a class="button-secondary" href="sell.html">Go Golden</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Testimonials</p>
+          <h2>Trusted by Ugandan drivers</h2>
+        </div>
+      </div>
+      <div class="testimonials">
+        <article class="testimonial">
+          <p>"I found a clean Harrier in Kampala and messaged the seller the same day."</p>
+          <h3>Sarah N.</h3>
+        </article>
+        <article class="testimonial">
+          <p>"The filters made it simple to compare Prado options within my budget."</p>
+          <h3>Daniel O.</h3>
+        </article>
+        <article class="testimonial">
+          <p>"Posting my Premio was easy, and buyers could see the photos immediately."</p>
+          <h3>Grace A.</h3>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <strong>Motor Traders Uganda</strong>
+      <span>Buy and sell cars across Uganda. Prices shown in UGX.</span>
+    </div>
+  </footer>
+  <a class="whatsapp-float" href="https://wa.me/25678526797?text=Hello%20Motor%20Traders%20Uganda%2C%20I%20need%20help." target="_blank" rel="noopener" aria-label="Chat with Motor Traders Uganda on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.49A11.86 11.86 0 0 0 12.06 0C5.49 0 .13 5.35.13 11.93c0 2.1.55 4.16 1.6 5.97L0 24l6.25-1.64a11.9 11.9 0 0 0 5.8 1.48h.01c6.58 0 11.93-5.35 11.94-11.93 0-3.19-1.24-6.19-3.48-8.42Zm-8.46 18.33h-.01a9.88 9.88 0 0 1-5.03-1.38l-.36-.21-3.7.97.99-3.61-.23-.37a9.86 9.86 0 0 1-1.51-5.29c0-5.47 4.46-9.92 9.94-9.92a9.86 9.86 0 0 1 7.02 2.91 9.86 9.86 0 0 1 2.9 7.02c0 5.47-4.46 9.92-9.91 9.92Zm5.45-7.42c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.08-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.87 1.21 3.07c.15.2 2.08 3.18 5.05 4.46.71.31 1.26.49 1.69.63.71.23 1.35.2 1.86.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"></path></svg>
+  </a>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

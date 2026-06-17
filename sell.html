@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sell Your Car | Motor Traders Uganda</title>
+  <meta name="description" content="Post your car for sale in Uganda with photos, price, mileage, location, fuel type, transmission, and seller details.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 13h18l-2-5H5l-2 5Z"></path><circle cx="7" cy="18" r="2"></circle><circle cx="17" cy="18" r="2"></circle></svg></span>
+        <span>Motor Traders Uganda</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Browse Cars</a>
+        <a class="active" href="sell.html">Sell a Car</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="help.html">Help Centre</a>
+        <a href="auth.html" data-user-name>Account</a>
+      </div>
+      <div class="nav-actions">
+        <a class="button-secondary" href="dashboard.html">Dashboard</a>
+        <a class="button" href="auth.html">Account</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <h1>Sell Your Car</h1>
+        <p>New users get 2 months golden free access for posting. After that, Basic is free with 2 car postings, Premium is UGX 30,000/month, and Golden is UGX 40,000.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="form-layout">
+        <form class="panel form-card" id="sellForm">
+          <section>
+            <h2 class="form-section-title">Vehicle Details</h2>
+            <div class="form-grid">
+              <div class="field">
+                <label for="sellMake">Make *</label>
+                <select id="sellMake" name="make" required></select>
+              </div>
+              <div class="field">
+                <label for="sellModel">Model *</label>
+                <input id="sellModel" name="model" required placeholder="e.g. Land Cruiser">
+              </div>
+              <div class="field">
+                <label for="sellYear">Year *</label>
+                <input id="sellYear" name="year" type="number" min="1980" max="2026" value="2020" required>
+              </div>
+              <div class="field">
+                <label for="sellEngine">Engine Size</label>
+                <input id="sellEngine" name="engine" placeholder="e.g. 2000cc">
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="form-section-title">Pricing & Condition</h2>
+            <div class="form-grid">
+              <div class="field">
+                <label for="sellPrice">Price (UGX) *</label>
+                <input id="sellPrice" name="price" type="number" min="0" step="100000" required placeholder="e.g. 85000000">
+              </div>
+              <div class="field">
+                <label for="sellMileage">Mileage (km) *</label>
+                <input id="sellMileage" name="mileage" type="number" min="0" required placeholder="e.g. 60000">
+              </div>
+              <div class="field">
+                <label for="sellTransmission">Transmission *</label>
+                <select id="sellTransmission" name="transmission" required>
+                  <option>Automatic</option>
+                  <option>Manual</option>
+                  <option>CVT</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="sellFuel">Fuel Type *</label>
+                <select id="sellFuel" name="fuel" required>
+                  <option>Petrol</option>
+                  <option>Diesel</option>
+                  <option>Hybrid</option>
+                  <option>Electric</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="sellBody">Body Type *</label>
+                <select id="sellBody" name="body" required>
+                  <option>SUV</option>
+                  <option>Sedan</option>
+                  <option>Van</option>
+                  <option>Pickup</option>
+                  <option>Hatchback</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="sellLocation">Location *</label>
+                <select id="sellLocation" name="location" required></select>
+              </div>
+              <div class="field full">
+                <label for="sellDescription">Description</label>
+                <textarea id="sellDescription" name="description" placeholder="Condition, service history, import status, negotiability"></textarea>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="form-section-title">Posting Access & Payment</h2>
+            <div class="form-grid">
+              <div class="field">
+                <label for="listingPlan">Plan</label>
+                <select id="listingPlan" name="plan">
+                  <option value="basic">Basic - Free</option>
+                  <option value="premium30">Premium - UGX 30,000/month</option>
+                  <option value="golden">Golden - UGX 40,000</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="paymentMethod">Payment Method</label>
+                <select id="paymentMethod" name="paymentMethod">
+                  <option value="">No payment for Basic or free trial</option>
+                  <option>MTN Mobile Money</option>
+                  <option>Airtel Money</option>
+                  <option>Visa Card</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label>Posting rules</label>
+                <input value="2 months free golden access. After trial: Basic has 2 posts, Premium is UGX 30,000/month, Golden is UGX 40,000." disabled>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="form-section-title">Photos</h2>
+            <div class="upload-zone">
+              <label for="carPhotos"><strong>Upload multiple car photos</strong></label>
+              <input id="carPhotos" type="file" accept="image/*" multiple>
+              <span>Upload minimum 3 and maximum 10 photos. Images preview before posting and are saved with the listing when the app runs through the server.</span>
+            </div>
+            <div class="preview-grid" id="previewGrid"></div>
+          </section>
+
+          <button class="button" type="submit"><span class="loader"></span>Save Listing</button>
+        </form>
+
+        <aside class="panel form-card">
+          <p class="kicker">Seller checklist</p>
+          <h2>Make buyers trust the listing</h2>
+          <div class="why-grid" style="grid-template-columns:1fr; margin-top:18px;">
+            <article class="info-card">
+              <h3>Use clear photos</h3>
+              <p>Show all sides, interior, dashboard mileage, tyres, and logbook details.</p>
+            </article>
+            <article class="info-card">
+              <h3>Set UGX price</h3>
+              <p>Use a realistic Uganda shilling price and mention if it is negotiable.</p>
+            </article>
+            <article class="info-card">
+              <h3>Respond quickly</h3>
+              <p>Buyers send private in-app messages. Your direct phone contact is not shown publicly.</p>
+            </article>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <strong>Motor Traders Uganda</strong>
+      <span>Seller tools, profile management, listings, photos, and dashboard.</span>
+    </div>
+  </footer>
+  <a class="whatsapp-float" href="https://wa.me/25678526797?text=Hello%20Motor%20Traders%20Uganda%2C%20I%20need%20help." target="_blank" rel="noopener" aria-label="Chat with Motor Traders Uganda on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.49A11.86 11.86 0 0 0 12.06 0C5.49 0 .13 5.35.13 11.93c0 2.1.55 4.16 1.6 5.97L0 24l6.25-1.64a11.9 11.9 0 0 0 5.8 1.48h.01c6.58 0 11.93-5.35 11.94-11.93 0-3.19-1.24-6.19-3.48-8.42Zm-8.46 18.33h-.01a9.88 9.88 0 0 1-5.03-1.38l-.36-.21-3.7.97.99-3.61-.23-.37a9.86 9.86 0 0 1-1.51-5.29c0-5.47 4.46-9.92 9.94-9.92a9.86 9.86 0 0 1 7.02 2.91 9.86 9.86 0 0 1 2.9 7.02c0 5.47-4.46 9.92-9.91 9.92Zm5.45-7.42c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.08-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.87 1.21 3.07c.15.2 2.08 3.18 5.05 4.46.71.31 1.26.49 1.69.63.71.23 1.35.2 1.86.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"></path></svg>
+  </a>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

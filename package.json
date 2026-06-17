@@ -1,0 +1,10 @@
+{
+  "name": "motor-traders-uganda",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Permanent Motor Traders Uganda car marketplace demo with server-side JSON storage.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
